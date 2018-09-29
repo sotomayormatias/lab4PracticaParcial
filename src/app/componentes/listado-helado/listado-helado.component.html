@@ -1,0 +1,19 @@
+
+<table>
+  <thead>
+    <td>SABOR</td>
+    <td>TIPO</td>
+    <td>KILOS</td>
+  </thead>
+  <tbody>
+    <tr *ngFor="let helado of listado">
+      <td>{{ helado.sabor }}</td>
+      <td>{{ helado.tipo }}</td>
+      <td>{{ helado.kilos }}</td>
+      <td><img [src]="'/imagenes/' + helado.id + '.jpg'"></td>
+      <app-boton [id]="helado.id"></app-boton>
+    </tr>
+  </tbody>
+</table>
+
+<app-alta-helado></app-alta-helado>
